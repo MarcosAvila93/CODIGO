@@ -1,0 +1,119 @@
+/* Sintaxis de CSS | Selector puede ser una etiqueta de HTML
+Propiedad es un atributo que le vamos a dar a las etiquetas -> 
+
+
+Selector {
+    propiedad: valor;
+}
+
+*/
+
+/* El reseteo | Se utiliza el selector universal * | Le saco el margen y el relleno con dos propiedades que se llaman margin y padding  | Estos nos da la posibilidad de decidir nosotros mismos los espacios entre los elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Defino la unidad de medida general para todo */
+
+html {
+    font-size: 20px;
+}
+
+h1 {
+    color: blue;
+}
+
+/* p {
+    color: firebrick;
+} */
+/* Para individualziar los elementos de HTML en CSS puedo utilizar clases*/
+
+.paragraph {
+    /* Color del texto */
+    color: cadetblue;
+}
+
+/*ID | # delante del nombre del ID */
+
+#servicios {
+    /* Color de fondo */
+    background-color: khaki;
+}
+
+/* La diferencia entre class y ID es que class se puede reutilziar pero but ID not | 
+Caso de la vida: el ID es como tu DNI, class es como un atributo tuyo 
+
+ID = para vincular enlaces, identificar una sección completa o para javascript u otros lenguajes que no tengan que ver con CSS
+
+Class = lo vamos a usar todo el tiempo
+*/
+
+/* Propiedades */
+.paragraph {
+    color: blue;
+    text-align: right;
+    text-decoration: underline;
+    font-size: 28px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Unidades de medida */
+
+/* Unidades absolutas | En Des. Web decimos que son absolutas  porque no cambian su tamaño en distintas pantallas
+cm - pt - mt - px  
+*/
+
+/* Unidades relativas
+Son las que se adaptan al tipo de pantalla 
+px - % - em - rem - vh - vw
+*/
+
+.paragraph-dos {
+    font-size: 18px;
+}
+
+#pie-de-pagina {
+    background-color: blue;
+    /* El ancho | 50% de cualquier pantalla en la que estamos mirando este footer */
+    width: 50%;
+}
+
+/* rem | Directamente proporcional root | root es la medida general que nos da el navegador | 16px */
+
+/* a {
+    font-size: 2 rem; 
+}
+
+img {
+    height: 20rem;
+} */
+
+/* em | Directamente proporcional al elemento HTML o :root que son definidos por nosotros mismos */
+
+a {
+    font-size: 4em;
+    /* 20 x 4 */
+}
+
+/* ¿Cuál unidadd y dónde lo utilizamos entonces? */
+
+/* Pueden usar la que quieran y donde quieran
+
+Parrafos, titulos, enlaces suelen tener px en el font-size 
+Las imágenes y videos, o multimedia, suele utilizar %, vh y vw 
+Las propiedades de la caja, margin y padding, pueden usar rem o em
+*/
+
+body{
+    /* url () -> función preguntarme, dónde está la imágen? */
+    background-image: url("10.jpg");
+    background-size: cover;
+    /* background-position: center; */
+    /* Parallax */
+    background-attachment: fixed;
+}
